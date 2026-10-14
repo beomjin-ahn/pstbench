@@ -1,0 +1,11 @@
+{
+ "protocol": "pstbench",
+ "track": "pst50-paired",
+ "input_encoding": "rec709",
+ "dataset": {
+  "name": "zrgong/PST50",
+  "revision": "6ed86e34c37c558a0b2401d52f06603d619472e1"
+ },
+ "method": "nlut",
+ "deviations": []
+}

@@ -1,0 +1,11 @@
+{
+ "protocol": "pstbench",
+ "track": "acetone-transfer",
+ "input_encoding": "srgb",
+ "dataset": {
+  "name": "Vivre/AceTone-Bench-Transfer",
+  "revision": "b504dfc28882281b1e77511227153294a6782360"
+ },
+ "method": "acetone",
+ "deviations": []
+}
