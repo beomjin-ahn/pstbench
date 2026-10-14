@@ -1,0 +1,39 @@
+id: pstbench
+
+metrics:
+  psnr:
+    data_range: 255
+    cap_db: 100.0
+  ssim:
+    sigma: 1.5
+    k1: 0.01
+    k2: 0.03
+    data_range: 255
+  lpips:
+    net: alex
+    version: "0.1"
+  deltae00:
+    kL: 1.0
+    kC: 1.0
+    kH: 1.0
+  hcorr:
+    bins: 256
+
+compare:
+  ties:
+    psnr: 0.001
+    lpips: 0.001
+    deltae00: 0.001
+
+aggregation:
+  ci_level: 0.95
+  bootstrap_resamples: 10000
+  bootstrap_seed: 0
+
+display_precision:
+  psnr: 2
+  ssim: 4
+  lpips: 4
+  deltae00: 2
+  hcorr_gt: 4
+  hcorr_style: 4

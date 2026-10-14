@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pstbench"
+version = "1.0.0"
+description = "Scoring kit and evaluation protocol for photorealistic style transfer on paired benchmarks."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+keywords = ["style transfer", "color transfer", "benchmark", "evaluation", "CIEDE2000", "LPIPS"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pillow>=10.0",
+  "pyyaml>=6.0",
+  "scikit-image>=0.22",
+  "torch>=2.0",
+  "lpips==0.1.4",
+  "huggingface_hub>=0.20",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.5",
+  "opencv-python-headless>=4.8",
+]
+
+[project.scripts]
+pstbench = "pstbench.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/beomjin-ahn/pstbench"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pstbench"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "NPY"]
