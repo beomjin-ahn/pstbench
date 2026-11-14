@@ -85,6 +85,17 @@ All methods were run outside the kit and scored from their outputs; each has a `
 
 They were written by `scripts/sensitivity.py` from the output folders (needs the `dev` extra). To score your own outputs under every variant: `python scripts/sensitivity.py --track pst50-paired my-method=path/to/outputs --out results/sensitivity` (`--device cuda` for LPIPS). `identity_log.csv` was written with the spec `identity_log=log:identity`, which reads PST50's log content in place of an outputs folder.
 
+## Citation
+
+```bibtex
+@inproceedings{ahn2027pstbench,
+  title     = {Protocol Matters: Auditing and Standardizing Photorealistic Style Transfer Evaluation},
+  author    = {Ahn, Beomjin},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops},
+  year      = {2027}
+}
+```
+
 ## License
 
 MIT.
